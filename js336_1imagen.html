@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		var imagenActual = 1;
+		window.onload = function() {
+			//activar un listener sobre todo el documento
+			document.getElementById('imagen').addEventListener('click', cambiarImagen);
+		}
+			
+		function cambiarImagen() {
+			if (imagenActual == 1) {
+				document.getElementById('imagen').src='img/punta_cana_2.jpg';
+				imagenActual=2
+			} else if (imagenActual == 2){
+					document.getElementById('imagen').src='img/punta_cana_3.jpg';
+					imagenActual=3
+			}else {
+				document.getElementById('imagen').src='img/punta_cana_1.jpg';
+				imagenActual=1
+
+			}
+		}
+</script>
+</head>
+<body>
+		<p>Click en la imagen para cambiar</p>
+		<img id='imagen' src='img/punta_cana_1.jpg'>
+</body>
+</html>
